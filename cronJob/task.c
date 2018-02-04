@@ -10,10 +10,14 @@
 
 int main(int argc, char const *argv[])
 {
+  /* Get current process id */
   int pid = getpid();
+  /* Get current user id */
   int uid = getuid();
+  /* Get current date and time */
   time_t t = time(NULL);
   struct tm time = *localtime(&t);
+  /* Execute my system call */
   int32_t presort[BUFFER_SIZE];
   int32_t aftersort_1[BUFFER_SIZE];
   long syscall_ret;
@@ -22,9 +26,9 @@ int main(int argc, char const *argv[])
   {
     presort[i] = rand();
   }
-
   syscall_ret = syscall(333, presort, BUFFER_SIZE, aftersort_1);
 
+  /* Print the outputs */
   printf("Current Process ID: %d\n", pid);
   printf("Current User ID: %d\n", uid);
   printf("Current Date: %02d/%02d/%04d\n",
