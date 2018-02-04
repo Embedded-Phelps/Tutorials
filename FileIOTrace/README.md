@@ -22,10 +22,10 @@ track.c is a program that:
 ### Build the test executable
 	gcc -c track.c -o test
 
-###Run the 'ltrace' command line application to collect the output of the system calls and library calls that were used to interact with the file:
+### Run the 'ltrace' command line application to collect the output of the system calls and library calls that were used to interact with the file:
 	ltrace ./test
 
-###Run the 'strace' command line application to collect the output of the system calls and library calls that were used to interact with th    e file:
+### Run the 'strace' command line application to collect the output of the system calls and library calls that were used to interact with the file:
 	strace ./test
 
 ### Run 'perf' to monitor the performance statistics of the program:
