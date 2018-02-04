@@ -1,3 +1,21 @@
+/*****************************************************************************
+ * Copyright (C) 2018 by Shuting Guo
+ *
+ * Redistribution, modification or use of this software in source or binary
+ * forms is permitted as long as the files maintain this copyright. Users are
+ * permitted to modify this and use it to learn about the field of embedded
+ * software. Shuting Guo is not liable for any misuse of this material.
+ *
+*****************************************************************************/
+/**
+ * @file exsyscall.c
+ * @brief The source file for the Implementation of my own system call
+ *
+ * @author Shuting Guo
+ * @date 02/3/2018
+ * @version 1.0
+ *
+ */
 #include <linux/kernel.h>
 #include <linux/stddef.h>
 #include <linux/syscalls.h>
@@ -6,7 +24,6 @@
 #include <linux/printk.h>
 #include <linux/kern_levels.h>
 #include <uapi/asm-generic/errno-base.h>
-
 #include "exsyscall.h"
 
 SYSCALL_DEFINE3(shuting_sort, int __user *, src_ptr,
